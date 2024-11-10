@@ -5,4 +5,8 @@ public class Main {
         String text = "Hello World";
         System.out.println(text);
     }
+
+    public static void affiche(String messageToPrint) {
+        System.out.println(messageToPrint);
+    }
 }
