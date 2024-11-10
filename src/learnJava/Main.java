@@ -2,12 +2,12 @@ package learnJava;
 
 public class Main {
     public static void main (String[] args) {
-        int somme = Main.addition(2, 7);
-        System.out.println(somme);
+        Main.affichage("Marty");
     }
 
-    public static void affiche(String messageToPrint) {
-        System.out.println(messageToPrint);
+    public static void affichage(String messageToPrint) {
+        String message = "Bonjour " + messageToPrint;
+        System.out.println(message);
     }
 
     public static int addition(final int number1, final int number2) {
