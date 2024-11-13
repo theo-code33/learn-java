@@ -1,6 +1,6 @@
 package learnJava;
 
-public abstract class Bloc {
+public abstract class Bloc implements IBloc {
     protected int length;
     protected int width;
     protected int height;
