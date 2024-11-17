@@ -1,6 +1,6 @@
 package learnJava;
 
-public class PorteLockedException extends RuntimeException {
+public class PorteLockedException extends Exception {
     public PorteLockedException(String message) {
         super(message);
     }

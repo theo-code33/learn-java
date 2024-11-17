@@ -9,11 +9,11 @@ public class Kit {
     private List<Bloc> blocs;
     private Set<String> keywords;
 
-    public Kit() {
+    public Kit() throws IllegalBlocException {
         this.initialize();
     }
 
-    private void initialize() {
+    private void initialize() throws IllegalBlocException {
         this.blocs = new ArrayList<Bloc>();
         this.blocs.add(new Mur(3, 2, 2, true));
         this.blocs.add(new Mur(3, 2, 2, true));

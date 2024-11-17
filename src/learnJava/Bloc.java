@@ -6,7 +6,10 @@ public abstract class Bloc implements IBloc {
     protected int height;
     protected Couleur color;
 
-    Bloc(final int length, final int width, final int height) {
+    Bloc(final int length, final int width, final int height) throws IllegalBlocException {
+        if(length < MIN_LENGTH || width < MIN_WIDTH || height < MIN_HEIGHT) {
+            throw new IllegalBlocException("Impossible de construire le bloc.");
+        }
         this.length = length;
         this.width = width;
         this.height = height;

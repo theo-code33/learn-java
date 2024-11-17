@@ -4,7 +4,7 @@ public class Porte extends Bloc {
 
     private boolean lock;
 
-    Porte(final int length, final int width, final int height, final boolean lock) {
+    Porte(final int length, final int width, final int height, final boolean lock) throws IllegalBlocException {
         super(length, width, height);
         this.lock = lock;
         this.color = Couleur.BLUE;
@@ -14,7 +14,7 @@ public class Porte extends Bloc {
         return lock;
     }
 
-    public void lock() {
+    public void lock() throws PorteLockedException {
         if(this.lock == true) {
             throw new PorteLockedException("La porte est déjà verrouillé");
         }
