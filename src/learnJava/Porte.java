@@ -13,4 +13,11 @@ public class Porte extends Bloc {
     public boolean isLock() {
         return lock;
     }
+
+    public void lock() {
+        if(this.lock == true) {
+            throw new PorteLockedException("La porte est déjà verrouillé");
+        }
+        this.lock = true;
+    }
 }
