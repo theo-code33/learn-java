@@ -12,6 +12,14 @@ public class Main {
 
         Kit kit = new Kit();
         kit.printKit();
+
+        try {
+            Porte porte = new Porte(1,1,1, true);
+            System.out.println("is not lock");
+            porte.lock();
+        } catch (PorteLockedException exception) {
+            System.out.println(exception.getMessage());
+        }
     }
 
     public static void zeroCounter(List<Integer> numbers) {
