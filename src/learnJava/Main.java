@@ -6,19 +6,14 @@ import java.util.List;
 
 public class Main {
     public static void main (String[] args) {
-        Main.affichage("Marty");
-        List<Integer> numbers = Arrays.asList(1220, 1452, 1445, 0, 5874, 0, 3);
-        Main.zeroCounter(numbers);
-
-        Kit kit = new Kit();
-        kit.printKit();
-
         try {
-            Porte porte = new Porte(1,1,1, true);
+            Porte porte = new Porte(1, 1, 1, true);
             System.out.println("is not lock");
             porte.lock();
-        } catch (PorteLockedException exception) {
-            System.out.println(exception.getMessage());
+        } catch (IllegalBlocException illegalBlocException) {
+            System.out.println(illegalBlocException.getMessage());
+        } catch (PorteLockedException porteLockedException) {
+            System.out.println(porteLockedException.getMessage());
         }
     }
 
